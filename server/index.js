@@ -8,7 +8,8 @@ require('dotenv').config();
 /// --- FIX STARTS HERE ---
 const corsOptions = {
   origin: [
-    'http://localhost:5173', // Your local frontend
+    'http://localhost:5173',
+    'https://smart-task-manager-server-delta.vercel.app'
     
   ],
   credentials: true,
