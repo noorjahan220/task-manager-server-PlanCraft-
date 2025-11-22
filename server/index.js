@@ -5,16 +5,16 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 require('dotenv').config();
 
-/// --- FIX STARTS HERE ---
 const corsOptions = {
   origin: [
     'http://localhost:5173',
-    'https://smart-task-manager-server-delta.vercel.app'
-    
+    'http://localhost:5174',
+    'https://smart-task-manager-server-delta.vercel.app',
+    'https://task-manager-60ea7.web.app'  
   ],
   credentials: true,
   optionSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'] // <--- PATCH MUST BE HERE
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 };
 
 app.use(cors(corsOptions));
